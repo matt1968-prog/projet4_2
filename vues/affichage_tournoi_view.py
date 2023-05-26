@@ -1,5 +1,5 @@
 from typing import List
-from modeles.player import Joueur
+#from ..modeles.player import Joueur
 from modeles.tournoi import Tournoi
 
 
