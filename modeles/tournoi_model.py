@@ -18,6 +18,10 @@ class Tournoi:
     def to_dict(self) -> dict:
         return {
             "id": str(self.id),
-            "title": self.titre,
+            "Nom": str (self.nom_tournoi),
+            "Lieu": str (self.lieu_tournoi),
+            "Date de début": (self.date_debut_tournoi),
+            "Date de fin": (self.date_fin_tournoi)
             "joueurs": [j.id for j in self.joueurs],
+            "description": (self.description)
         }
