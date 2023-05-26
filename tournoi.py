@@ -1,5 +1,6 @@
 from modeles.database_model import Database
 from controleurs.main_controller import MainController
+from controleurs.base_controller import BaseController
 
 
 def main():
