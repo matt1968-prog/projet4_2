@@ -10,6 +10,6 @@ class AddPlayerController(BaseController):
     def execute(self):
         view = AddPlayerView()
         data_player = view.display()
-        joueur = Joueur(uuid4(), data_player["nom"], data_player["prenom"], data_player["dob"], data_player["sexe"], data_player["id_nat"], data_player["rating"])
+        joueur = Joueur(uuid4(), nom_joueur["nom"], prenom_joueur["prenom"], dob["dob"], sex["sexe"], id_nat["id_nat"], rating["rating"])
         self.database.joueurs.append(joueur)
         self.database.save(FILENAME)

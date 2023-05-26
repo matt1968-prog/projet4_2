@@ -5,14 +5,18 @@ from uuid import uuid4
 FILENAME = "data.json"
 
 
-class AddNewTournament:
+class AddNewTournament (BaseController):
+
+    def __init__ (self):
+        pass
+    
     def execute(self):
-        #view = DisplayTournamentView()
-        #data_tournoi = view.display()
-        # view = AddPlayerView()
-        view = DisplayTournamentView(database.self)
+        view = DisplayTournamentView()
         data_tournoi = view.display()
-        tournoi = Tournoi(uuid4(), nom_tournoi["tournoi"], lieu_tournoi["lieu_tournoi"], date_debut_tournoi["date_debut_tournoi"], date_fin_tournoi["date_fin_tournoi"], type_tournoi["type_tournoi"], description["description"], nombre_tours["nombre_tours"])
+        # view = AddPlayerView()
+        # view = DisplayTournamentView(tournoi)
+        #data_tournoi = view.display()
+        tournoi = Tournoi(uuid4(), data_tournoi["nom_tournoi"], data_tournoi["lieu_tournoi"], data_tournoi["date_debut_tournoi"], data_tournoi["date_fin_tournoi"], data_tournoii["type_tournoi"], data_tournoi["description"], data_tournoi["nombre_tours"])
         self.database.tournois.append(tournoi)
         self.database.save(FILENAME)
      

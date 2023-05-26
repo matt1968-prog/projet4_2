@@ -7,14 +7,13 @@ from vues.ajout_tournoi import CreationTournoiView
 
 
 class MainController(BaseController):
-    
     def execute(self):
         while True:
             view = MainView()
             choix = view.display()
             controller = None
             if choix == 1:
-                controller = AddNewTournament(self.database)
+                controller = AddPlayerController(self.database)
             elif choix == 2:
                 controller = ShowPlayerListController(self.database)
             elif choix == 3:
